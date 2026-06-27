@@ -9,7 +9,7 @@ export default function Home() {
     <div className="bg-green-800">
       <Header/>
       <Main/>
-      <Sponser/>
+      {/* <Sponser/> */}
       <Schedule/>
       <Register/>
     </div>
