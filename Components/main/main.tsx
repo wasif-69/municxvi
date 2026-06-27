@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "@/public/logo.jpeg";
+import logo from "@/public/logo-removebg-preview.png"
 
 const Main = () => {
   return (
@@ -17,6 +17,9 @@ const Main = () => {
             <h1 className="mt-10 text-7xl md:text-8xl lg:text-[10rem] font-black tracking-[-0.06em] leading-none">
               MUNIC
               <span className="block text-[#C9A227] mt-2">XVI</span>
+              <span className="block mt-2 text-sm md:text-base font-semibold tracking-[0.35em] uppercase text-[#C9A227]/80">
+  The Sixteenth Edition
+</span>
             </h1>
 
             <p className="mt-12 text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed">
@@ -84,6 +87,7 @@ const Main = () => {
             <span>
               <span className="text-[#C9A227]">XVI</span> Edition
             </span>
+            
 
             <span>2026</span>
 
