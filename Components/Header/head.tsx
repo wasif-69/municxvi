@@ -169,7 +169,7 @@ export default function Header() {
         transition-all duration-300
 
         ${mobileOpen
-              ? "max-h-[500px] border-t border-white/10"
+              ? "max-h-125 border-t border-white/10"
               : "max-h-0"
             }
       `}

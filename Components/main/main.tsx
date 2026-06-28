@@ -70,9 +70,9 @@ const Main = () => {
                 className="
                   object-contain
                   opacity-90
-                  w-[280px]
-                  md:w-[340px]
-                  lg:w-[420px]
+                  w-70
+                  md:w-85
+                  lg:w-105
                 "
                 priority
               />

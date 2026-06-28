@@ -1,17 +1,19 @@
 import Header from "@/Components/Header/head";
+import Location from "@/Components/location/Location";
 import Main from "@/Components/main/main";
-import Register from "@/Components/Registration/register";
+// import Register from "@/Components/Registration/register";
 import Schedule from "@/Components/Schedule/schedule";
-import Sponser from "@/Components/sponser/sponser"
+import Sponser from "@/Components/sponser/sponser";
+
 
 export default function Home() {
   return (
-    <div className="bg-green-800">
+    <div className="bg-[#061222] ">
       <Header/>
       <Main/>
-      {/* <Sponser/> */}
+      <Sponser/>
       <Schedule/>
-      <Register/>
+      <Location/>
     </div>
 
 
