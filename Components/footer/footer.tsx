@@ -12,25 +12,7 @@ const Footer = () => {
 
             {/* Watermark */}
 <h1
-className="
-  pointer-events-none
-  absolute
-  inset-0
-  flex
-  flex-col
-  items-center
-  justify-center
-  font-black
-  uppercase
-  leading-none
-  tracking-[0.15em]
-  select-none
-  text-[white]/5
-  blur-[1px]
-"
-style={{
-  fontSize: "clamp(5rem, 18vw, 18rem)",
-}}
+className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center font-black uppercase leading-none tracking-[0.15em] select-none text-[white]/5 blur-[1px]" style={{fontSize: "clamp(5rem, 18vw, 18rem)",}}
 >
 <span>MUNIC</span>
 <span className="text-[0.45em] tracking-[0.35em] mt-2">
@@ -149,6 +131,13 @@ style={{
 
                         <div className="space-y-5 text-slate-300">
 
+                            <div>
+                                <p className="text-[#C9A227] text-sm">
+                                    Under Secretary-General
+                                </p>
+                                <p>Maham Ali</p>
+
+                            </div>
                             <div>
                                 <p className="text-[#C9A227] text-sm">
                                     Secretary-General
