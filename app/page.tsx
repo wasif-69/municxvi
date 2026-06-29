@@ -1,3 +1,4 @@
+import Footer from "@/Components/footer/footer";
 import Header from "@/Components/Header/head";
 import Location from "@/Components/location/Location";
 import Main from "@/Components/main/main";
@@ -14,6 +15,7 @@ export default function Home() {
       <Sponser/>
       <Schedule/>
       <Location/>
+      <Footer/>
     </div>
 
 

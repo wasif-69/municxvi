@@ -1,6 +1,6 @@
 import Image from "next/image";
 import school from "@/public/school-logo-removebg-preview.png";
-import { MapPin } from "lucide-react";
+import { MapPin, ArrowUpRight } from "lucide-react";
 
 const Location = () => {
   return (
@@ -36,7 +36,7 @@ const Location = () => {
           {/* Left */}
           <div className="lg:col-span-2">
 
-            <div className="w-20 h-[2px] bg-[#C9A227] mb-8" />
+            <div className="w-20 h-0.5 bg-[#C9A227] mb-8" />
 
             <h3 className="text-4xl font-bold text-white leading-tight">
               The City School
@@ -46,12 +46,8 @@ const Location = () => {
             </h3>
 
             <div className="mt-10 flex gap-4">
-
               <div className="h-12 w-12 rounded-full bg-[#C9A227]/10 flex items-center justify-center flex-shrink-0">
-                <MapPin
-                  className="text-[#C9A227]"
-                  size={22}
-                />
+                <MapPin className="text-[#C9A227]" size={22} />
               </div>
 
               <div>
@@ -60,14 +56,25 @@ const Location = () => {
                 </p>
 
                 <p className="text-slate-400 mt-2 leading-7">
-                  The official venue for MUNIC XVI,
-                  offering modern facilities,
-                  spacious committee rooms, and an
-                  inspiring academic environment.
+                  The official venue for MUNIC XVI.
                 </p>
               </div>
-
             </div>
+
+            {/* Button */}
+            <a
+              href="https://maps.google.com/?q=The+City+School+Capital+Campus+Islamabad"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-10 px-6 py-3 rounded-full border border-[#C9A227] text-[#C9A227] font-medium hover:bg-[#C9A227] hover:text-[#061222] transition-all duration-300 group"
+            >
+              Open in Maps
+
+              <ArrowUpRight
+                size={18}
+                className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+              />
+            </a>
 
           </div>
 
