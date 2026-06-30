@@ -11,14 +11,14 @@ const Footer = () => {
             <div className="absolute -bottom-52 right-0 h-120 w-120 rounded-full bg-[#C9A227]/10 blur-[170px]" />
 
             {/* Watermark */}
-<h1
-className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center font-black uppercase leading-none tracking-[0.15em] select-none text-[white]/5 blur-[1px]" style={{fontSize: "clamp(5rem, 18vw, 18rem)",}}
->
-<span>MUNIC</span>
-<span className="text-[0.45em] tracking-[0.35em] mt-2">
-  XVI
-</span>
-</h1>
+            <h1
+                className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center font-black uppercase leading-none tracking-[0.15em] select-none text-[white]/5 blur-[1px]" style={{ fontSize: "clamp(5rem, 18vw, 18rem)", }}
+            >
+                <span>MUNIC</span>
+                <span className="text-[0.45em] tracking-[0.35em] mt-2">
+                    XVI
+                </span>
+            </h1>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 py-24">
 
@@ -92,57 +92,26 @@ className="pointer-events-none absolute inset-0 flex flex-col items-center justi
 
                     {/* Quick Links */}
 
-                    {/* <div>
-
-            <h3 className="uppercase tracking-[0.3em] text-[#C9A227] text-xs mb-8">
-              Quick Links
-            </h3>
-
-            <div className="space-y-4">
-
-              {[
-                "Home",
-                "About",
-                "Committees",
-                "Secretariat",
-                "Schedule",
-                "Venue",
-              ].map((item) => (
-                <Link
-                  key={item}
-                  href="#"
-                  className="block text-slate-300 hover:text-[#C9A227] transition"
-                >
-                  {item}
-                </Link>
-              ))}
-
-            </div>
-
-          </div> */}
 
                     {/* Secretariat */}
-
                     <div>
-
                         <h3 className="uppercase tracking-[0.3em] text-[#C9A227] text-xs mb-8">
                             Secretariat
                         </h3>
 
-                        <div className="space-y-5 text-slate-300">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-300">
+                            <div>
+                                <p className="text-[#C9A227] text-sm">
+                                    Secretary-General
+                                </p>
+                                <p>Anas Khursheed</p>
+                            </div>
 
                             <div>
                                 <p className="text-[#C9A227] text-sm">
                                     Under Secretary-General
                                 </p>
                                 <p>Maham Ali</p>
-
-                            </div>
-                            <div>
-                                <p className="text-[#C9A227] text-sm">
-                                    Secretary-General
-                                </p>
-                                <p>Anas Khursheed</p>
                             </div>
 
                             <div>
@@ -156,7 +125,7 @@ className="pointer-events-none absolute inset-0 flex flex-col items-center justi
                                 <p className="text-[#C9A227] text-sm">
                                     Director-General
                                 </p>
-                                <p>Haysum Imtiaz</p>
+                                <p>Haysam Imtiaz</p>
                             </div>
 
                             <div>
@@ -170,11 +139,9 @@ className="pointer-events-none absolute inset-0 flex flex-col items-center justi
                                 <p className="text-[#C9A227] text-sm">
                                     Chief of Staff
                                 </p>
-                                <p>Haaniya Rehman</p>
+                                <p>Haniya Rehman</p>
                             </div>
-
                         </div>
-
                     </div>
 
                     {/* Contact */}
