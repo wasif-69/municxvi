@@ -66,7 +66,7 @@ const Footer = () => {
 
                 {/* Main Footer */}
 
-                <div className="grid lg:grid-cols-4 gap-14">
+                <div className="grid lg:grid-cols-3 gap-14">
 
                     {/* Brand */}
 
@@ -94,12 +94,12 @@ const Footer = () => {
 
 
                     {/* Secretariat */}
-                    <div>
+                    <div className="">
                         <h3 className="uppercase tracking-[0.3em] text-[#C9A227] text-xs mb-8">
                             Secretariat
                         </h3>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-300">
+                        <div className="grid grid-cols-1 md:grid-cols-[1.25fr_1fr] gap-6 text-slate-300">
                             <div>
                                 <p className="text-[#C9A227] text-sm">
                                     Secretary-General
@@ -108,7 +108,7 @@ const Footer = () => {
                             </div>
 
                             <div>
-                                <p className="text-[#C9A227] text-sm">
+                                <p className="text-[#C9A227] text-sm whitespace-nowrap">
                                     Under Secretary-General
                                 </p>
                                 <p>Maham Ali</p>
@@ -119,6 +119,13 @@ const Footer = () => {
                                     President
                                 </p>
                                 <p>Karrar Haider</p>
+                            </div>
+
+                            <div>
+                                <p className="text-[#C9A227] text-sm">
+                                    Chief of Staff
+                                </p>
+                                <p>Haniya Rehman</p>
                             </div>
 
                             <div>
@@ -135,12 +142,7 @@ const Footer = () => {
                                 <p>Pariza Imran</p>
                             </div>
 
-                            <div>
-                                <p className="text-[#C9A227] text-sm">
-                                    Chief of Staff
-                                </p>
-                                <p>Haniya Rehman</p>
-                            </div>
+                            
                         </div>
                     </div>
 
