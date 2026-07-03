@@ -1,18 +1,8 @@
-import Image from "next/image";
-import school from "@/public/school-logo-removebg-preview.png";
 import { MapPin, ArrowUpRight } from "lucide-react";
 
 const Location = () => {
   return (
-    <section className="relative overflow-hidden bg-[#061222] py-24">
-      {/* Background */}
-      <Image
-        src={school}
-        alt="Background"
-        fill
-        priority
-        className="object-cover opacity-10"
-      />
+    <section id="location" className="relative overflow-hidden bg-[#061222] py-24">
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-[#061222]/90" />
@@ -21,11 +11,7 @@ const Location = () => {
 
         {/* Heading */}
         <div className="mb-16 text-center">
-          <p className="text-[#C9A227] uppercase tracking-[0.4em] text-xs">
-            Venue
-          </p>
-
-          <h2 className="mt-4 text-5xl font-bold text-white">
+          <h2 className=" text-5xl font-bold text-white">
             Conference Venue
           </h2>
         </div>
@@ -46,7 +32,7 @@ const Location = () => {
             </h3>
 
             <div className="mt-10 flex gap-4">
-              <div className="h-12 w-12 rounded-full bg-[#C9A227]/10 flex items-center justify-center flex-shrink-0">
+              <div className="h-12 w-12 rounded-full bg-[#C9A227]/10 flex items-center justify-center shrink-0">
                 <MapPin className="text-[#C9A227]" size={22} />
               </div>
 

@@ -1,6 +1,6 @@
 const Schedule = () => {
     return (
-      <section className="bg-[#061222] text-white py-28">
+      <section id="schedule" className="bg-[#061222] text-white py-28">
         <div className="max-w-5xl mx-auto px-6 lg:px-12">
           
           {/* HEADER */}
@@ -33,7 +33,7 @@ const Schedule = () => {
               </h3>
   
               <p className="mt-3 text-slate-400 text-sm leading-relaxed">
-                Opening Ceremony, Roll Call, Committee Session I
+                Opening Ceremony, Roll Call, Committee Sessions,Qawali Night
               </p>
             </div>
   
@@ -48,7 +48,7 @@ const Schedule = () => {
               </h3>
   
               <p className="mt-3 text-slate-400 text-sm leading-relaxed">
-                Full Committee Sessions, Debate Cycles, Draft Resolutions
+                Full Committee Sessions and Debate Concert
               </p>
             </div>
   
@@ -63,7 +63,7 @@ const Schedule = () => {
               </h3>
   
               <p className="mt-3 text-slate-400 text-sm leading-relaxed">
-                Final Debate, Voting Procedure, Closing Ceremony
+                Drafting and Voting procedures,Closing ceremony and Formal Dinner 
               </p>
             </div>
           </div>

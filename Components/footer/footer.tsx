@@ -1,6 +1,5 @@
-
-import { Mail, Phone, MapPin, ArrowUpRight, } from "lucide-react";
-import { FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { Mail, Phone} from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
     return (
@@ -38,8 +37,9 @@ const Footer = () => {
                         leadership, and international collaboration at MUNIC XVI.
                     </p>
 
-                    <button
-                        className="
+                    <Link href={"https://linktr.ee/officialmunic"}>
+                        <button
+                            className="
               mt-10
               px-8
               py-4
@@ -54,9 +54,10 @@ const Footer = () => {
               hover:scale-105
               transition
             "
-                    >
-                        Register Now
-                    </button>
+                        >
+                            Register Now
+                        </button>
+                    </Link>
 
                 </div>
 
@@ -66,7 +67,7 @@ const Footer = () => {
 
                 {/* Main Footer */}
 
-                <div className="grid lg:grid-cols-3 gap-14">
+                <div id="about" className="grid lg:grid-cols-3 gap-14">
 
                     {/* Brand */}
 
@@ -90,147 +91,118 @@ const Footer = () => {
 
                     </div>
 
-                    {/* Quick Links */}
+                    {/* Contact the Secretariat */}
+<div className="lg:col-span-2">
 
+  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
 
-                    {/* Secretariat */}
-                    <div className="">
-                        <h3 className="uppercase tracking-[0.3em] text-[#C9A227] text-xs mb-8">
-                            Secretariat
-                        </h3>
+    <h3 className="uppercase tracking-[0.3em] text-[#C9A227] text-xs">
+      Contact Us
+    </h3>
 
-                        <div className="grid grid-cols-1 md:grid-cols-[1.25fr_1fr] gap-6 text-slate-300">
-                            <div>
-                                <p className="text-[#C9A227] text-sm">
-                                    Secretary-General
-                                </p>
-                                <p>Anas Khursheed</p>
-                            </div>
+    <a
+      href="mailto:municxvi@gmail.com"
+      className="flex items-center gap-2 text-slate-400 hover:text-[#C9A227] transition text-sm"
+    >
+      <Mail size={16} />
+      municxvi@gmail.com
+    </a>
 
-                            <div>
-                                <p className="text-[#C9A227] text-sm whitespace-nowrap">
-                                    Under Secretary-General
-                                </p>
-                                <p>Maham Ali</p>
-                            </div>
+  </div>
 
-                            <div>
-                                <p className="text-[#C9A227] text-sm">
-                                    President
-                                </p>
-                                <p>Karrar Haider</p>
-                            </div>
+  <div className="grid gap-5 sm:grid-cols-2">
 
-                            <div>
-                                <p className="text-[#C9A227] text-sm">
-                                    Chief of Staff
-                                </p>
-                                <p>Haniya Rehman</p>
-                            </div>
+    {/* Card */}
 
-                            <div>
-                                <p className="text-[#C9A227] text-sm">
-                                    Director-General
-                                </p>
-                                <p>Haysam Imtiaz</p>
-                            </div>
+    <div className="rounded-2xl border border-[#C9A227]/15 bg-white/5 backdrop-blur-xl p-5">
 
-                            <div>
-                                <p className="text-[#C9A227] text-sm">
-                                    Deputy Director-General
-                                </p>
-                                <p>Pariza Imran</p>
-                            </div>
+      <p className="text-xs uppercase tracking-[0.25em] text-[#C9A227]">
+        IT Director
+      </p>
 
-                            
-                        </div>
-                    </div>
+      <h4 className="mt-2 text-lg font-semibold text-white">
+        Wasif Khalil
+      </h4>
 
-                    {/* Contact */}
+      <a
+        href="tel:+923001234567"
+        className="mt-4 flex items-center gap-2 text-slate-400 hover:text-[#C9A227] transition"
+      >
+        <Phone size={16} />
+        +92 300 1234567
+      </a>
 
-                    <div>
+    </div>
 
-                        <h3 className="uppercase tracking-[0.3em] text-[#C9A227] text-xs mb-8">
-                            Contact
-                        </h3>
+    {/* Card */}
 
-                        <div className="space-y-5">
+    <div className="rounded-2xl border border-[#C9A227]/15 bg-white/5 backdrop-blur-xl p-5">
 
-                            <a
-                                href="mailto:info@municxvi.com"
-                                className="flex items-center gap-4 text-slate-300 hover:text-[#C9A227] transition"
-                            >
-                                <Mail size={18} />
-                                municxvi@gmial.com
-                            </a>
+      <p className="text-xs uppercase tracking-[0.25em] text-[#C9A227]">
+        Secretary-General
+      </p>
 
-                            <a
-                                href="tel:+923001234567"
-                                className="flex items-center gap-4 text-slate-300 hover:text-[#C9A227] transition"
-                            >
-                                <Phone size={18} />
-                                +92 300 1234567
-                            </a>
+      <h4 className="mt-2 text-lg font-semibold text-white">
+        Anas Khursheed
+      </h4>
 
-                            <div className="flex items-center gap-4 text-slate-300">
+      <a
+        href="tel:+923001234567"
+        className="mt-4 flex items-center gap-2 text-slate-400 hover:text-[#C9A227] transition"
+      >
+        <Phone size={16} />
+        +92 300 1234567
+      </a>
 
-                                <MapPin size={18} />
+    </div>
 
-                                <span>
-                                    Islamabad, Pakistan
-                                </span>
+    {/* Card */}
 
-                            </div>
+    <div className="rounded-2xl border border-[#C9A227]/15 bg-white/5 backdrop-blur-xl p-5">
 
-                            <div className="flex gap-4 pt-4">
+      <p className="text-xs uppercase tracking-[0.25em] text-[#C9A227]">
+        Director-General
+      </p>
 
-                                <a
-                                    href="https://www.instagram.com/munic.xv/"
-                                    target="_blank"
-                                    className="
-                    h-12
-                    w-12
-                    rounded-full
-                    border
-                    border-[#C9A227]/20
-                    bg-white/5
-                    flex
-                    items-center
-                    justify-center
-                    hover:bg-[#C9A227]
-                    hover:text-[#061222]
-                    transition
-                  "
-                                >
-                                    <FaInstagram size={20} />
-                                </a>
+      <h4 className="mt-2 text-lg font-semibold text-white">
+        Haysam Imtiaz
+      </h4>
 
-                                <a
-                                    href="#"
-                                    className="
-                    h-12
-                    w-12
-                    rounded-full
-                    border
-                    border-[#C9A227]/20
-                    bg-white/5
-                    flex
-                    items-center
-                    justify-center
-                    hover:bg-[#C9A227]
-                    hover:text-[#061222]
-                    transition
-                  "
-                                >
-                                    <FaXTwitter size={18} />
-                                </a>
+      <a
+        href="tel:+923001234567"
+        className="mt-4 flex items-center gap-2 text-slate-400 hover:text-[#C9A227] transition"
+      >
+        <Phone size={16} />
+        +92 300 1234567
+      </a>
 
-                            </div>
+    </div>
 
-                        </div>
+    {/* Card */}
 
-                    </div>
+    <div className="rounded-2xl border border-[#C9A227]/15 bg-white/5 backdrop-blur-xl p-5">
 
+      <p className="text-xs uppercase tracking-[0.25em] text-[#C9A227]">
+        Chief of Staff
+      </p>
+
+      <h4 className="mt-2 text-lg font-semibold text-white">
+        Haniya Rehman
+      </h4>
+
+      <a
+        href="tel:+923001234567"
+        className="mt-4 flex items-center gap-2 text-slate-400 hover:text-[#C9A227] transition"
+      >
+        <Phone size={16} />
+        +92 300 1234567
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
                 </div>
 
                 {/* Bottom */}
@@ -248,10 +220,8 @@ const Footer = () => {
                         </span>
 
                         <span className="text-[#C9A227] font-medium">
-                            VK
+                            Wasif Khalil
                         </span>
-
-                        <ArrowUpRight size={16} />
 
                     </div>
 
