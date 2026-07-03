@@ -113,77 +113,88 @@ export default function Header() {
               </a>
             ))}
           </nav>
-          <a
-  href="https://www.instagram.com/municxvi/"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Visit our Instagram"
-  className="
-    group
-    relative
-    h-12 w-12
-    rounded-full
-    flex items-center justify-center
 
-    bg-white/90 backdrop-blur-xl
-    border border-[#C9A227]/30
-
-    text-[#061222]
-    shadow-sm
-
-    transition-all duration-300 ease-out
-
-    hover:bg-[#C9A227]
-    hover:scale-105
-    hover:shadow-[0_10px_30px_rgba(201,162,39,0.35)]
-  "
->
-  <FaInstagram
-    size={20}
-    className="
-      transition-all duration-300
-      group-hover:rotate-6
-      group-hover:scale-110
-    "
-  />
-</a>
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
 
-            <Link href={"/guide"}>
-              <button
-                className={`
-            px-5 py-2
-            text-sm
+  {/* Guide */}
+  <Link href="/guide">
+    <button
+      className={`
+        px-5 py-2
+        rounded-full
+        text-sm
+        transition-all duration-300
 
-            ${scrolled
-                    ? "text-slate-700"
-                    : "text-white"
-                  }
-          `}
-              >
-                Guide
-              </button>
-            </Link>
+        ${
+          scrolled
+            ? "text-slate-700 hover:bg-slate-100"
+            : "text-white hover:bg-white/10"
+        }
+      `}
+    >
+      Guide
+    </button>
+  </Link>
 
-            <Link href={"https://linktr.ee/officialmunic"}>
+  {/* Instagram */}
+  <a
+    href="https://www.instagram.com/municxvi/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    className="
+      h-11
+      w-11
+      rounded-full
+      border
+      border-[#C9A227]/20
+      bg-white/5
+      flex
+      items-center
+      justify-center
 
-              <button
-                className="
-            px-5 py-2
-            rounded-full
-            bg-[#C9A227]
-            text-[#061222]
-            font-semibold
-            hover:opacity-90
-            transition
-          "
-              >
-                Register
-              </button>
-            </Link>
-          </div>
+      text-[#C9A227]
+
+      transition-all
+      duration-300
+
+      hover:bg-[#C9A227]
+      hover:text-[#061222]
+      hover:scale-105
+    "
+  >
+    <FaInstagram size={18} />
+  </a>
+
+  {/* Register */}
+  <Link
+    href="https://linktr.ee/officialmunic"
+    target="_blank"
+  >
+    <button
+      className="
+        px-6
+        py-2.5
+        rounded-full
+        bg-[#C9A227]
+        text-[#061222]
+        font-medium
+
+        transition-all
+        duration-300
+
+        hover:scale-105
+        hover:shadow-lg
+        hover:shadow-[#C9A227]/30
+      "
+    >
+      Register
+    </button>
+  </Link>
+
+</div>
 
           {/* Mobile Menu Button */}
           <button
@@ -214,85 +225,97 @@ export default function Header() {
             }
       `}
         >
-         <nav className="flex flex-col px-5 py-4">
+        <nav className="flex flex-col px-6 py-6">
 
-{/* Nav Items */}
 {navItems.map((item) => (
   <a
     key={item.name}
     href={item.href}
     onClick={() => setMobileOpen(false)}
     className={`
-      py-3
+      py-4
       uppercase
+      tracking-[0.2em]
       text-sm
-      tracking-[0.15em]
-      transition-colors duration-200
 
-      ${scrolled ? "text-slate-700" : "text-white"}
+      ${
+        scrolled
+          ? "text-slate-700"
+          : "text-white"
+      }
+
       hover:text-[#C9A227]
+      transition
     `}
   >
     {item.name}
   </a>
 ))}
 
-{/* CTA */}
+<div className="my-4 border-t border-white/10" />
+
 <Link
-  href="https://linktr.ee/officialmunic"
-  target="_blank"
-  rel="noopener noreferrer"
+  href="/guide"
   onClick={() => setMobileOpen(false)}
+  className={`
+    py-4
+    ${
+      scrolled
+        ? "text-slate-700"
+        : "text-white"
+    }
+    hover:text-[#C9A227]
+    transition
+  `}
 >
-  <button
-    className="
-      mt-5
-      w-full
-      py-3
-      rounded-full
-
-      bg-[#C9A227]
-      text-[#061222]
-      font-semibold
-
-      transition-all duration-300
-      hover:opacity-90
-      hover:scale-[1.02]
-    "
-  >
-    Register Now
-  </button>
+  Guide
 </Link>
 
-{/* Instagram */}
 <a
   href="https://www.instagram.com/municxvi/"
   target="_blank"
   rel="noopener noreferrer"
-  onClick={() => setMobileOpen(false)}
   className={`
-    mt-4
-    flex items-center justify-center gap-2
+    py-4
+    flex
+    items-center
+    gap-3
 
-    py-3
-    rounded-full
-
-    border
-    transition-all duration-300
-
-    ${scrolled
-      ? "border-slate-300 text-slate-700 hover:bg-slate-100"
-      : "border-white/20 text-white hover:bg-white/10"
+    ${
+      scrolled
+        ? "text-slate-700"
+        : "text-white"
     }
 
     hover:text-[#C9A227]
   `}
 >
   <FaInstagram size={18} />
-  <span className="text-sm uppercase tracking-[0.15em]">
-    Instagram
-  </span>
+  Instagram
 </a>
+
+<Link
+  href="https://linktr.ee/officialmunic"
+  target="_blank"
+>
+  <button
+    className="
+      mt-6
+      w-full
+      rounded-full
+      bg-[#C9A227]
+      py-3.5
+
+      text-[#061222]
+      font-semibold
+
+      transition
+      hover:scale-[1.02]
+    "
+  >
+    Register Now
+  </button>
+</Link>
 
 </nav>
         </div>

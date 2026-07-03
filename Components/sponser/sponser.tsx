@@ -86,10 +86,10 @@ const Sponsors = () => {
       <div className="relative overflow-hidden border-y border-[#C9A227]/15 py-8">
 
         {/* Left Fade */}
-        <div className="absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-[#061222] to-transparent" />
+        <div className="absolute left-0 top-0 z-10 h-full w-32 bg-linear-to-r from-[#061222] to-transparent" />
 
         {/* Right Fade */}
-        <div className="absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-[#061222] to-transparent" />
+        <div className="absolute right-0 top-0 z-10 h-full w-32 bg-linear-to-l from-[#061222] to-transparent" />
 
         <div className="flex w-max animate-marquee">
 
