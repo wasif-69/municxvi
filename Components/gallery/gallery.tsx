@@ -8,7 +8,7 @@ const Gallery = () => {
 
   const items = fs
     .readdirSync(galleryPath)
-    .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file))
+    .filter((file) => /\.(jpg|jpeg|png|webp\HEIC|CR2\JPG)$/i.test(file))
     .map((file) => ({
       image: `/Gallery/${file}`,
       text: "",
@@ -18,7 +18,7 @@ const Gallery = () => {
     <section className="relative overflow-hidden bg-[#061222] py-28">
 
       {/* Background Glow */}
-      <div className="absolute left-1/2 top-1/2 h-[32rem] w-[32rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C9A227]/8 blur-[180px]" />
+      <div className="absolute left-1/2 top-1/2 h-128 w-lg -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C9A227]/8 blur-[180px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
 
@@ -55,7 +55,7 @@ const Gallery = () => {
             shadow-[0_0_60px_rgba(201,162,39,0.08)]
           "
         >
-          <div className="h-[420px] sm:h-[500px] md:h-[600px] lg:h-[700px]">
+          <div className="h-105 sm:h-125 md:h-150 lg:h-175">
             <CircularGallery
               items={items}
               bend={1}
