@@ -1,9 +1,11 @@
 "use client";
 import { FaInstagram } from "react-icons/fa6";
 import { useEffect, useState } from "react";
-import { Globe2 } from "lucide-react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Logo from "@/public/logo-removebg-preview.png";
+import Image from "next/image";
+
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -52,12 +54,12 @@ export default function Header() {
             flex items-center justify-center
 
             ${scrolled
-                  ? "bg-[#C9A227] text-[#061222]"
+                  ? "bg-[#061222] text-[#061222]"
                   : "bg-[#C9A227]/15 border border-[#C9A227]/40 text-[#C9A227]"
                 }
           `}
             >
-              <Globe2 size={20} />
+              <Image alt="logo" src={Logo} ></Image>
             </div>
 
             <div>

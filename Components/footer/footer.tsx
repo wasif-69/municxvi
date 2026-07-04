@@ -117,11 +117,11 @@ const Footer = () => {
     <div className="rounded-2xl border border-[#C9A227]/15 bg-white/5 backdrop-blur-xl p-5">
 
       <p className="text-xs uppercase tracking-[0.25em] text-[#C9A227]">
-        IT Director
+        Director Registrations
       </p>
 
       <h4 className="mt-2 text-lg font-semibold text-white">
-        Wasif Khalil
+        Waliyah Adil
       </h4>
 
       <a
@@ -129,7 +129,7 @@ const Footer = () => {
         className="mt-4 flex items-center gap-2 text-slate-400 hover:text-[#C9A227] transition"
       >
         <Phone size={16} />
-        +92 300 1234567
+        +92 336 2221073
       </a>
 
     </div>
@@ -139,11 +139,11 @@ const Footer = () => {
     <div className="rounded-2xl border border-[#C9A227]/15 bg-white/5 backdrop-blur-xl p-5">
 
       <p className="text-xs uppercase tracking-[0.25em] text-[#C9A227]">
-        Secretary-General
+        Director Registrations
       </p>
 
       <h4 className="mt-2 text-lg font-semibold text-white">
-        Anas Khursheed
+        Eisha Kamran
       </h4>
 
       <a
@@ -151,7 +151,7 @@ const Footer = () => {
         className="mt-4 flex items-center gap-2 text-slate-400 hover:text-[#C9A227] transition"
       >
         <Phone size={16} />
-        +92 300 1234567
+        +92 328 5533880
       </a>
 
     </div>
@@ -161,7 +161,7 @@ const Footer = () => {
     <div className="rounded-2xl border border-[#C9A227]/15 bg-white/5 backdrop-blur-xl p-5">
 
       <p className="text-xs uppercase tracking-[0.25em] text-[#C9A227]">
-        Director-General
+        Director General
       </p>
 
       <h4 className="mt-2 text-lg font-semibold text-white">
@@ -173,7 +173,7 @@ const Footer = () => {
         className="mt-4 flex items-center gap-2 text-slate-400 hover:text-[#C9A227] transition"
       >
         <Phone size={16} />
-        +92 300 1234567
+        +92 318 0147843
       </a>
 
     </div>
@@ -195,7 +195,7 @@ const Footer = () => {
         className="mt-4 flex items-center gap-2 text-slate-400 hover:text-[#C9A227] transition"
       >
         <Phone size={16} />
-        +92 300 1234567
+        +92 335 3570706
       </a>
 
     </div>

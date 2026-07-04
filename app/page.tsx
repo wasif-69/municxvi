@@ -1,4 +1,5 @@
 import Footer from "@/Components/footer/footer";
+import Gallery from "@/Components/gallery/gallery";
 import Header from "@/Components/Header/head";
 import Location from "@/Components/location/Location";
 import Main from "@/Components/main/main";
@@ -14,6 +15,7 @@ export default function Home() {
       <Main/>
       <Sponser/>
       <Schedule/>
+      <Gallery/>
       <Location/>
       <Footer/>
     </div>

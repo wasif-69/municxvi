@@ -33,7 +33,7 @@ const Schedule = () => {
               </h3>
   
               <p className="mt-3 text-slate-400 text-sm leading-relaxed">
-                Opening Ceremony, Roll Call, Committee Sessions,Qawali Night
+                Opening Ceremony, Roll Call, <br /> Committee Sessions,Social TBD
               </p>
             </div>
   
@@ -48,7 +48,7 @@ const Schedule = () => {
               </h3>
   
               <p className="mt-3 text-slate-400 text-sm leading-relaxed">
-                Full Committee Sessions and Debate Concert
+                Full Committee Sessions and Debate <br /> Concert
               </p>
             </div>
   
@@ -63,7 +63,7 @@ const Schedule = () => {
               </h3>
   
               <p className="mt-3 text-slate-400 text-sm leading-relaxed">
-                Drafting and Voting procedures,Closing ceremony and Formal Dinner 
+                Drafting and Voting procedures <br />Closing ceremony and Formal Dinner 
               </p>
             </div>
           </div>

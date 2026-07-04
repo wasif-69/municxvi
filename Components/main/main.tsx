@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logo from "@/public/logo-removebg-preview.png"
+import Link from "next/link";
 
 const Main = () => {
   return (
@@ -30,6 +31,7 @@ const Main = () => {
 
             {/* CTA */}
             <div className="mt-14 flex flex-wrap items-center gap-5">
+              <Link href={"https://linktr.ee/officialmunic"}>
               <button
                 className="
                   px-8 py-3.5
@@ -43,6 +45,7 @@ const Main = () => {
               >
                 Register Now
               </button>
+              </Link>
 
               <button
                 className="
