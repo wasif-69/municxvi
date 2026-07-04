@@ -35,10 +35,6 @@ const Gallery = () => {
 
           <div className="mx-auto mt-6 h-px w-24 bg-[#C9A227]" />
 
-          <p className="mx-auto mt-8 max-w-2xl text-base leading-8 text-slate-400 md:text-lg">
-            Relive the memorable moments, engaging debates, and unforgettable
-            experiences from the previous edition of MUNIC.
-          </p>
 
         </div>
 
