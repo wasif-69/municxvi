@@ -22,8 +22,8 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { name: "About", href: "#about" },
-    { name: "Committees", href: "#committees" },
+    { name: "About", href: "/about" },
+    { name: "Committees", href: "/community" },
     { name: "Location", href: "#location" },
     { name: "Schedule", href: "#schedule" },
   ];
