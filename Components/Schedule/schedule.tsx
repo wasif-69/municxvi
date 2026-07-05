@@ -33,7 +33,7 @@ const Schedule = () => {
               </h3>
   
               <p className="mt-3 text-slate-400 text-sm leading-relaxed">
-                Opening Ceremony, Roll Call, <br /> Committee Sessions,Social TBD
+                Opening Ceremony, Roll Call, <br /> Committee Sessions, Social TBD
               </p>
             </div>
   

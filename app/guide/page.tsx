@@ -33,7 +33,7 @@ const Guide = () => {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="mt-6 max-w-xl text-sm leading-relaxed text-slate-400 sm:text-base md:text-lg"
         >
-          The official study guides will be released some before the event. Be sure to check back then to 
+          The official study guides will be released some days before the event. Be sure to check back then to 
           access all the resources you&apos;ll need to prepare.
         </motion.p>
 
