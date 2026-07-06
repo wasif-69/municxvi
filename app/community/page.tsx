@@ -2,8 +2,8 @@ import fs from "fs";
 import path from "path";
 import Image from "next/image";
 
-const seniorPath = path.join(process.cwd(), "public", "Senior");
-const juniorPath = path.join(process.cwd(), "public", "Junior");
+const seniorPath = path.join(process.cwd(), "public", "senior");
+const juniorPath = path.join(process.cwd(), "public", "junior");
 
 const seniorCommittees = fs
     .readdirSync(seniorPath)
@@ -15,11 +15,11 @@ const juniorCommittees = fs
     .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file))
     .sort((a, b) => Number(a.split(".")[0]) - Number(b.split(".")[0]));
 
-  
+
 const Committee = () => {
 
-    
-    console.log(seniorCommittees)  
+
+    console.log(seniorCommittees)
     console.log(juniorCommittees)
     return (
         <section
@@ -55,37 +55,74 @@ const Committee = () => {
                         <div className="h-px flex-1 bg-[#C9A227]/20" />
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {seniorCommittees.map((file) => (
+                    {/* Poster 1 */}
+                    <div className="group overflow-hidden rounded-2xl border border-[#C9A227]/15 bg-white/5 hover:border-[#C9A227]/40 transition-all duration-300">
+                        <Image
+                            src={`/senior/${seniorCommittees[0]}`}
+                            alt="Committee 1"
+                            width={1600}
+                            height={900}
+                            priority
+                            className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                        />
+                    </div>
+
+                    {/* Posters 2-4 */}
+                    <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {seniorCommittees.slice(1, 4).map((file) => (
                             <div
                                 key={file}
-                                className="
-          group
-          overflow-hidden
-          rounded-2xl
-          border border-[#C9A227]/15
-          bg-white/5
-          transition-all duration-300
-          hover:-translate-y-1
-          hover:border-[#C9A227]/40
-        "
+                                className="group overflow-hidden rounded-2xl border border-[#C9A227]/15 bg-white/5 hover:border-[#C9A227]/40 transition-all duration-300"
                             >
                                 <Image
-                                    src={`/Senior/${file}`}
-                                    alt="Senior Committee"
+                                    src={`/senior/${file}`}
+                                    alt="Committee"
                                     width={700}
                                     height={900}
-                                    className="
-            w-full
-            h-auto
-            object-cover
-            transition-transform duration-500
-            group-hover:scale-105
-          "
+                                    className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
                                 />
-                                <div>Name:{file}</div>
                             </div>
                         ))}
+                    </div>
+
+                    {/* Poster 5 */}
+                    <div className="mt-8 group overflow-hidden rounded-2xl border border-[#C9A227]/15 bg-white/5 hover:border-[#C9A227]/40 transition-all duration-300">
+                        <Image
+                            src={`/senior/${seniorCommittees[4]}`}
+                            alt="Committee 5"
+                            width={1600}
+                            height={600}
+                            className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                        />
+                    </div>
+
+                    {/* Posters 6-8 */}
+                    <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {seniorCommittees.slice(5, 8).map((file) => (
+                            <div
+                                key={file}
+                                className="group overflow-hidden rounded-2xl border border-[#C9A227]/15 bg-white/5 hover:border-[#C9A227]/40 transition-all duration-300"
+                            >
+                                <Image
+                                    src={`/senior/${file}`}
+                                    alt="Committee"
+                                    width={700}
+                                    height={900}
+                                    className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                                />
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Poster 9 */}
+                    <div className="mt-8 group overflow-hidden rounded-2xl border border-[#C9A227]/15 bg-white/5 hover:border-[#C9A227]/40 transition-all duration-300">
+                        <Image
+                            src={`/senior/${seniorCommittees[8]}`}
+                            alt="Committee 9"
+                            width={1600}
+                            height={900}
+                            className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                        />
                     </div>
 
                 </div>
@@ -117,7 +154,7 @@ const Committee = () => {
         "
                             >
                                 <Image
-                                    src={`/Junior/${file}`}
+                                    src={`/junior/${file}`}
                                     alt="Junior Committee"
                                     width={700}
                                     height={900}
@@ -129,7 +166,6 @@ const Committee = () => {
             group-hover:scale-105
           "
                                 />
-                                <div>Name:{file}</div>
                             </div>
                         ))}
                     </div>

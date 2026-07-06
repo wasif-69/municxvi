@@ -29,7 +29,10 @@ const Admin = () => {
         <div>
             {Permission ? (
                 <div>
-                   
+                   <div>
+                    <h1>Adding the Admin Panel </h1>
+                    <div>Total User: </div>
+                    </div>
                 </div>
             ) : (
                 <div className="bg-amber-50 border-black-4 p-15">
