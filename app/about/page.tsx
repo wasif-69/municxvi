@@ -1,9 +1,38 @@
+import Link from "next/link";
+
 const About = () => {
     return (
         <section
             id="about"
             className="relative bg-[#061222] py-28 overflow-hidden"
         >
+
+            {/* Navigation */}
+            <div className="mb-16 flex flex-wrap items-center justify-center gap-3 text-sm uppercase tracking-[0.25em]">
+
+                <Link
+                    href="/"
+                    className="text-slate-400 transition-colors duration-300 hover:text-[#C9A227]"
+                >
+                    Home
+                </Link>
+
+                <span className="text-[#C9A227]/50">/</span>
+
+                <Link
+                    href="/community"
+                    className="text-slate-400 transition-colors duration-300 hover:text-[#C9A227]"
+                >
+                    Committees
+                </Link>
+
+                <span className="text-[#C9A227]/50">/</span>
+
+                <span className="text-white">
+                    About
+                </span>
+
+            </div>
             {/* Background Glow */}
             <div className="absolute top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-[#C9A227]/10 blur-[180px]" />
 
