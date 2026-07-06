@@ -19,8 +19,6 @@ const juniorCommittees = fs
 const Committee = () => {
 
 
-    console.log(seniorCommittees)
-    console.log(juniorCommittees)
     return (
         <section
             id="committees"
