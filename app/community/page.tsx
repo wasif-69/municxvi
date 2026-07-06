@@ -15,7 +15,12 @@ const juniorCommittees = fs
     .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file))
     .sort((a, b) => Number(a.split(".")[0]) - Number(b.split(".")[0]));
 
+  
 const Committee = () => {
+
+    
+    console.log(seniorCommittees)  
+    console.log(juniorCommittees)
     return (
         <section
             id="committees"
@@ -78,6 +83,7 @@ const Committee = () => {
             group-hover:scale-105
           "
                                 />
+                                <div>Name:{file}</div>
                             </div>
                         ))}
                     </div>
@@ -123,6 +129,7 @@ const Committee = () => {
             group-hover:scale-105
           "
                                 />
+                                <div>Name:{file}</div>
                             </div>
                         ))}
                     </div>
