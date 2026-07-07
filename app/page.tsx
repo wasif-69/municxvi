@@ -7,7 +7,6 @@ import Main from "@/Components/main/main";
 import Schedule from "@/Components/Schedule/schedule";
 import Sponser from "@/Components/sponser/sponser";
 
-
 export default function Home() {
   return (
     <div className="bg-[#061222] ">
