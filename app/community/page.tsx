@@ -54,7 +54,7 @@ const Committee = () => {
                     </div>
 
                     {/* Poster 1 */}
-                    <div className="group overflow-hidden rounded-2xl border border-[#C9A227]/15 bg-white/5 hover:border-[#C9A227]/40 transition-all duration-300">
+                    {/* <div className="group overflow-hidden rounded-2xl border border-[#C9A227]/15 bg-white/5 hover:border-[#C9A227]/40 transition-all duration-300">
                         <Image
                             src={`/senior/${seniorCommittees[0]}`}
                             alt="Committee 1"
@@ -63,11 +63,11 @@ const Committee = () => {
                             priority
                             className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
                         />
-                    </div>
+                    </div> */}
 
                     {/* Posters 2-4 */}
                     <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {seniorCommittees.slice(1, 4).map((file) => (
+                        {seniorCommittees.slice(0, 9).map((file) => (
                             <div
                                 key={file}
                                 className="group overflow-hidden rounded-2xl border border-[#C9A227]/15 bg-white/5 hover:border-[#C9A227]/40 transition-all duration-300"
@@ -83,45 +83,6 @@ const Committee = () => {
                         ))}
                     </div>
 
-                    {/* Poster 5 */}
-                    <div className="mt-8 group overflow-hidden rounded-2xl border border-[#C9A227]/15 bg-white/5 hover:border-[#C9A227]/40 transition-all duration-300">
-                        <Image
-                            src={`/senior/${seniorCommittees[4]}`}
-                            alt="Committee 5"
-                            width={1600}
-                            height={600}
-                            className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-                        />
-                    </div>
-
-                    {/* Posters 6-8 */}
-                    <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {seniorCommittees.slice(5, 8).map((file) => (
-                            <div
-                                key={file}
-                                className="group overflow-hidden rounded-2xl border border-[#C9A227]/15 bg-white/5 hover:border-[#C9A227]/40 transition-all duration-300"
-                            >
-                                <Image
-                                    src={`/senior/${file}`}
-                                    alt="Committee"
-                                    width={700}
-                                    height={900}
-                                    className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-                                />
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Poster 9 */}
-                    <div className="mt-8 group overflow-hidden rounded-2xl border border-[#C9A227]/15 bg-white/5 hover:border-[#C9A227]/40 transition-all duration-300">
-                        <Image
-                            src={`/senior/${seniorCommittees[8]}`}
-                            alt="Committee 9"
-                            width={1600}
-                            height={900}
-                            className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-                        />
-                    </div>
 
                 </div>
 
