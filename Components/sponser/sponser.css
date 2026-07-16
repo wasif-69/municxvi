@@ -1,18 +1,19 @@
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
 @keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
-  
-    to {
-      transform: translateX(-50%);
-    }
+  from {
+    transform: translateX(0);
   }
-  
-  .animate-marquee {
-    animation: marquee 120s linear infinite;
-    will-change: transform;
+
+  to {
+    transform: translateX(-50%);
   }
-  
-  .animate-marquee:hover {
-    animation-play-state: paused;
-  }
+}
