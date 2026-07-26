@@ -1,38 +1,45 @@
 "use client";
 
-import { useState } from "react";
-import { Document, Page, pdfjs } from "react-pdf";
+import { useEffect, useState } from "react";
 
-import "react-pdf/dist/Page/TextLayer.css";
-import "react-pdf/dist/Page/AnnotationLayer.css";
+interface PdfViewerProps {
+  pdfUrl: string;
+  title: string;
+}
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url
-).toString();
+export default function PdfViewer({ pdfUrl, title }: PdfViewerProps) {
+  const [isIOS, setIsIOS] = useState(false);
 
-export default function PdfViewer({ file }: { file: string }) {
-  const [numPages, setNumPages] = useState<number>();
+  useEffect(() => {
+    const ios =
+      /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+      (navigator.platform === "MacIntel" &&
+        navigator.maxTouchPoints > 1);
+
+    setIsIOS(ios);
+  }, []);
+
+  useEffect(() => {
+    if (isIOS) {
+      window.location.href = pdfUrl;
+      // or:
+      // window.open(pdfUrl, "_blank");
+    }
+  }, [isIOS, pdfUrl]);
+
+  if (isIOS) {
+    return (
+      <div className="flex h-[85vh] items-center justify-center text-white">
+        Opening PDF...
+      </div>
+    );
+  }
 
   return (
-    <div className="flex justify-center overflow-auto p-4">
-      <Document
-        file={file}
-        onLoadSuccess={({ numPages }) => setNumPages(numPages)}
-        loading={<p className="text-white">Loading PDF...</p>}
-        error={<p className="text-red-500">Failed to load PDF.</p>}
-      >
-        {Array.from({ length: numPages ?? 0 }, (_, index) => (
-          <Page
-            key={index}
-            pageNumber={index + 1}
-            width={900}
-            renderTextLayer
-            renderAnnotationLayer
-            className="mb-6"
-          />
-        ))}
-      </Document>
-    </div>
+    <iframe
+      src={pdfUrl}
+      className="h-[85vh] w-full"
+      title={title}
+    />
   );
 }

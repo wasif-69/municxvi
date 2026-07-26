@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, FileText } from "lucide-react";
+import PdfViewer from "@/Components/pdf/pdfview";
 
 const pdfs: Record<string, string | null> = {
   unhrc: "UNHRC.pdf",
@@ -76,9 +77,8 @@ export default async function Page({
         {pdf ? (
           <div className="mt-12 overflow-hidden rounded-2xl border border-[#C9A227]/20 bg-white/5">
 
-            <iframe
-              src={`/guideline/${pdf}`}
-              className="h-[85vh] w-full"
+            <PdfViewer
+              pdfUrl={`/guideline/${pdf}`}
               title={`${committeeNames[key]} Study Guide`}
             />
 
