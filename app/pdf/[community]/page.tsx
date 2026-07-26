@@ -77,10 +77,14 @@ export default async function Page({
         {pdf ? (
           <div className="mt-12 overflow-hidden rounded-2xl border border-[#C9A227]/20 bg-white/5">
 
-            <PdfViewer
-              pdfUrl={`/guideline/${pdf}`}
-              title={`${committeeNames[key]} Study Guide`}
-            />
+            <a
+              href={`/guideline/${pdf}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-12 inline-flex items-center rounded-full bg-[#C9A227] px-7 py-3 font-medium text-[#061222] hover:opacity-90"
+            >
+              Open Study Guide
+            </a>
 
           </div>
         ) : (
