@@ -1,9 +1,10 @@
 // Components/gallery/gallery.tsx
+"use server"
 import fs from "fs";
 import path from "path";
 import CircularGallery from "./CircularGallery";
 
-const Gallery = () => {
+const Gallery =async () => {
   const galleryPath = path.join(process.cwd(), "public", "Gallery");
 
   const items = fs

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, FileText } from "lucide-react";
-import PdfViewer from "@/Components/pdf/pdfview";
 
 const pdfs: Record<string, string | null> = {
   unhrc: "UNHRC.pdf",
@@ -50,6 +49,7 @@ export default async function Page({
   return (
     <main className="min-h-screen bg-[#061222] text-white">
 
+
       <section className="mx-auto max-w-7xl px-6 py-16">
 
         <Link
@@ -76,20 +76,77 @@ export default async function Page({
 
         {pdf ? (
           <div
-          className="
+            className="
+            group
+            relative
             mt-12
             overflow-hidden
             rounded-3xl
             border
             border-[#C9A227]/20
-            bg-white/[0.03]
+            bg-white/3
+            transition-all
+            duration-500
+            hover:border-[#C9A227]/40
+            hover:shadow-[0_0_60px_rgba(201,162,39,0.08)]
           "
-        >
-          <div className="flex flex-col items-center justify-center py-20 px-6">
-      
-            {/* PDF Icon */}
+          >
+
+            {/* Top Glow */}
             <div
               className="
+              pointer-events-none
+              absolute
+              -top-28
+              left-1/2
+              h-56
+              w-56
+              -translate-x-1/2
+              rounded-full
+              bg-[#C9A227]/10
+              blur-[110px]
+              opacity-0
+              transition-opacity
+              duration-500
+              group-hover:opacity-100
+            "
+            />
+
+            {/* Corner Glow */}
+            <div
+              className="
+              pointer-events-none
+              absolute
+              -right-24
+              -bottom-24
+              h-52
+              w-52
+              rounded-full
+              bg-[#C9A227]/5
+              blur-[120px]
+              opacity-0
+              transition-opacity
+              duration-500
+              group-hover:opacity-100
+            "
+            />
+
+            {/* Subtle Grid */}
+            <div
+              className="
+              absolute
+              inset-0
+              opacity-[0.03]
+              bg-[linear-gradient(to_right,#C9A227_1px,transparent_1px),linear-gradient(to_bottom,#C9A227_1px,transparent_1px)]
+              bg-size-[40px_40px]
+            "
+            />
+
+            <div className="relative flex flex-col items-center justify-center px-6 py-20">
+
+              {/* Floating PDF */}
+              <div
+                className="
                 flex
                 h-28
                 w-24
@@ -99,29 +156,33 @@ export default async function Page({
                 border
                 border-[#C9A227]/20
                 bg-[#0B172A]
+                transition-all
+                duration-500
+                group-hover:-translate-y-2
+                group-hover:rotate-2
               "
-            >
-              <FileText
-                size={46}
-                className="text-[#C9A227]"
-              />
-            </div>
-      
-            {/* Committee Name */}
-            <h2 className="mt-8 text-2xl md:text-3xl font-semibold text-white text-center">
-              {committeeNames[key]}
-            </h2>
-      
-            <div className="mt-5 h-px w-16 bg-[#C9A227]" />
-      
-            {/* Button */}
-            <a
-              href={`/guideline/${pdf}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
+              >
+                <FileText
+                  size={46}
+                  className="text-[#C9A227]"
+                />
+              </div>
+
+              <h2 className="mt-8 text-center text-2xl font-semibold text-white md:text-3xl">
+                {committeeNames[key]}
+              </h2>
+
+              <div className="mt-5 h-px w-16 bg-[#C9A227]" />
+
+              <a
+                href={`/guideline/${pdf}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
                 mt-10
                 rounded-full
+                border
+                border-[#C9A227]
                 bg-[#C9A227]
                 px-8
                 py-3
@@ -130,14 +191,16 @@ export default async function Page({
                 transition-all
                 duration-300
                 hover:scale-105
-                hover:shadow-[0_10px_30px_rgba(201,162,39,0.3)]
+                hover:shadow-[0_12px_35px_rgba(201,162,39,0.35)]
+                active:scale-95
               "
-            >
-              Open Study Guide
-            </a>
-      
+              >
+                Open Study Guide
+              </a>
+
+            </div>
+
           </div>
-        </div>
         ) : (
           <div className="mt-16 flex min-h-[50vh] items-center justify-center">
 
