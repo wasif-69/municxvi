@@ -9,7 +9,7 @@ import Link from "next/link";
 
 gsap.registerPlugin(MotionPathPlugin);
 
-import band from "@/public/hassan_-removebg-preview.png"; // Replace later
+import band from "@/public/gaftaar.png"; // Replace later
 
 
 
@@ -203,11 +203,11 @@ className="
                         </p>
 
                         <h2 className="mt-2 text-3xl font-black tracking-tight text-white">
-                            Hassan
+                            guftaar
                         </h2>
 
                         <p className="mt-1 text-sm uppercase tracking-[0.25em] text-slate-400">
-                            Raheem
+                            Band
                         </p>
                     </div>
 
